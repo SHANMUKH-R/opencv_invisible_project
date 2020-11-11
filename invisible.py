@@ -26,14 +26,14 @@ while(capture.isOpened()):
      
     
     # HSV values
-    lower_red = np.array([161, 155, 84])
-    upper_red = np.array([179, 255, 255])
+    lower_blue = np.array([161, 155, 84])
+    upper_blue = np.array([179, 255, 255])
 
-    mask1 = cv2.inRange(hsv, lower_red, upper_red)   #separating the cloak part
+    mask1 = cv2.inRange(hsv, lower_blue, upper_blue)   #separating the cloak part
 
-    lower_red = np.array([94, 80, 2])
-    upper_red = np.array([126, 255, 255])
-    mask2 = cv2.inRange(hsv, lower_red, upper_red)
+    lower_blue = np.array([94, 80, 2])
+    upper_blue = np.array([126, 255, 255])
+    mask2 = cv2.inRange(hsv, lower_blue, upper_blue)
 
     mask1 = mask1+mask2 #OR ! or x
     #Noise removal
